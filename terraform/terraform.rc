@@ -1,0 +1,9 @@
+provider_installation {
+    network_mirror {
+        url = "https://hub.mcs.mail.ru/repository/terraform-providers/"
+        include = ["vk-cs/*"]
+    }
+    direct {
+        exclude = ["vk-cs/*"]
+    }
+}

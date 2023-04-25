@@ -1,0 +1,9 @@
+{% for host in instance_conf %}
+Host {{ host.instance }}
+  HostName {{ host.address }}
+  Port {{ host.port }}
+  User {{ host.user }}
+  PreferredAuthentications publickey
+  IdentityFile {{ molecule_scenario_directory }}/jenkins_ssh
+  ConnectTimeout 30
+{% endfor %}
